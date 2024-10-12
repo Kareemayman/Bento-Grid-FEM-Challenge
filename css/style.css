@@ -7,6 +7,7 @@
     --black: hsl(0, 0%, 7%); 
     --white: hsl(0, 0%, 100%);
     --main-trans: 0.3s;
+    --narrow-spacing: -2px;
 }
 /* End Variables */
 
@@ -19,6 +20,7 @@ body {
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    background-color: var(--white);
 }
 
 * {
@@ -40,9 +42,113 @@ a {
     display: inline-block;
     text-decoration: none;
 }
+
+div > img {
+    max-width: 100%;
+}
+
+.container > div {
+    border-radius: 10px;
+}
 /* End Global */
 
 /* Start Local */
+.container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.container .create {
+    background-color: var(--yellow100);
+    grid-column: 1 / 1;
+    grid-row: 1 / 5;
+    padding: 30px;
+    align-content: center;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.container .create h1 {
+    letter-spacing: var(--narrow-spacing);
+    line-height: 0.9;
+}
+
+.container .create span {
+    color: var(--purple500);
+    font-style: italic;
+}
+
+.container .faster-with-ai {
+    background-color: var(--purple500);
+    padding: 50px;
+    color: white;
+    text-align: center;
+    grid-column: 2 / 4;
+    grid-row: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .faster-with-ai .stars {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container .faster-with-ai h1 {
+    font-size: 3.5rem;
+    letter-spacing: normal;
+    line-height: 0.9;
+}
+
+.container .faster-with-ai span:first-of-type {
+    color: var(--yellow500)
+}
+
+.container .faster-with-ai span:last-of-type {
+    font-style: italic;
+}
+
+.container .faster-with-ai p {
+    color: var(--white);
+}
+
+.container .schedule {
+    padding: 30px;
+    background-color: var(--purple100);
+    color: black;
+    overflow: hidden;
+    grid-column: 4 / 4;
+    grid-row: 1 / 11;
+}
+
+.container .schedule h2 {
+    letter-spacing: -1px;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 0.9;
+}
+
+.container .schedule div {
+    margin: 20px 0;
+    width: 185%;
+}
+
+.container .schedule p {
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
 
 /* End Local */
 
