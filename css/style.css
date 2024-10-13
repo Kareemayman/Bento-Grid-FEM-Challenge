@@ -256,6 +256,23 @@ div > img {
 /* End Local */
 
 /* Start Media Queries */
+@media (width <= 1200px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-height: fit-content;
+    }
+    .container > div {
+        width: 100%;
+        padding: 30px;
+    }
+    .container .grow {
+        flex-direction: column;
+    }
+}
+
 @media (min-width: 769px) {
     .container {
         width: 750px;
