@@ -50,6 +50,12 @@ div > img {
 
 .container > div {
     border-radius: 10px;
+    transition: var(--main-trans);
+    cursor: pointer;
+}
+
+.container > div:hover {
+    box-shadow: 0 0 15px 4px rgb(173, 173, 173);
 }
 /* End Global */
 
